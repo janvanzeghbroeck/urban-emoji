@@ -9,7 +9,7 @@ Using natural language processing (nlp) and non-negative matrix factorization (n
 
 Below is an example of the results, as you can see the crying emoji is most often affiliated with the words above for that group.
 
-![Alt text](/pics/results_example.png "Results Example")
+![Alt text](/figures/results_example.png "Results Example")
 
 <img src="figures/break_line.png" width=100% height=100%/>
 
