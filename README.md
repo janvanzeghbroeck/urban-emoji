@@ -16,9 +16,11 @@ Urban Emoji uses natural language processing (nlp) and non-negative matrix facto
 - Find topics with a large percentage of similar emojis to connects words and emojis
 - Currently applying NMF for tweets all with similar emojis to further identify associated words to find their slang definitions
 
+<img src="figures/break_line.png" width=100% height=100%/>
+
 ## Results
 
-Below is an example of the results, as you can see the crying emoji is most often affiliated with the words above for that group. The results show proof of concept and the next step
+Below is a proof of concept example of the results, as you can see the crying emoji is most often affiliated with the words above for that group. As I add more and more tweets and use different techniques I expect to get further improve the slang definitions for many emojis. 
 
 ![Alt text](/figures/results_example.png "Results Example")
 
@@ -29,7 +31,7 @@ Twitter’s API, Python, Pandas, Scikit-Learn, Unicode
 
 <img src="figures/break_line.png" width=100% height=100%/>
 
-## Seeing Taste
+## Other Projects
 Please feel free to check out my project With New Belgium Brewery called [Seeing Taste](https://github.com/janvanzeghbroeck/Seeing-Taste)
 
 [Linkedin](https://www.linkedin.com/in/janvanzeghbroeck/)
