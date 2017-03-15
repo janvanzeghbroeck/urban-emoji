@@ -1,10 +1,18 @@
 # Urban Emoji
 
-<img src="figures/1f913.png" width=20% height=20%/>
+<img src="figures/1f5e8.png" width=20% height=20%/> <img src="figures/1f913.png" width=20% height=20%/>
 
 <img src="figures/break_line.png" width=100% height=100%/>
 
+## Overview
+
 Urban Emoji uses natural language processing (nlp) and non-negative matrix factorization (nmf) to interpret slang meanings of emojis from analyzing tweets.
+
+- [Process](#process)
+- [Results](#results)
+- [Tech Stack](#tech-stack)
+- [More Projects](#more-projects)
+
 
 <img src="figures/break_line.png" width=100% height=100%/>
 
@@ -34,7 +42,7 @@ Twitter’s API, Python, Pandas, Scikit-Learn, Unicode
 
 <img src="figures/break_line.png" width=100% height=100%/>
 
-## Other Projects
+## More Projects
 Please feel free to check out my project With New Belgium Brewery called [Seeing Taste](https://github.com/janvanzeghbroeck/Seeing-Taste)
 
 [Linkedin](https://www.linkedin.com/in/janvanzeghbroeck/)
