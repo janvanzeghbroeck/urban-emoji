@@ -1,4 +1,7 @@
 # Urban Emoji
+
+<img src="figures/1f913.png" width=100% height=100%/>
+
 <img src="figures/break_line.png" width=100% height=100%/>
 
 Urban Emoji uses natural language processing (nlp) and non-negative matrix factorization (nmf) to interpret slang meanings of emojis from analyzing tweets.
@@ -20,7 +23,7 @@ Urban Emoji uses natural language processing (nlp) and non-negative matrix facto
 
 ## Results
 
-Below is a proof of concept example of the results, as you can see the crying emoji is most often affiliated with the words above for that group. As I add more and more tweets and use different techniques I expect to get further improve the slang definitions for many emojis. 
+Below is a proof of concept example of the results, as you can see the crying emoji is most often affiliated with the words above for that group. As I add more and more tweets and use different techniques I expect to get further improve the slang definitions for many emojis.
 
 ![Alt text](/figures/results_example.png "Results Example")
 
