@@ -1,6 +1,6 @@
 # Urban Emoji
 
-<img src="figures/1f913.png" width=100% height=100%/>
+<img src="figures/1f913.png" width=20% height=20%/>
 
 <img src="figures/break_line.png" width=100% height=100%/>
 
