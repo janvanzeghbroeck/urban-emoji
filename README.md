@@ -19,6 +19,7 @@ Urban Emoji uses natural language processing (nlp) and non-negative matrix facto
 ## Process
 
 - Using Twitter API to download tweets
+- Automated Twitter API to an AWS EC2 instance writing to a S3 bucket
 - Identify tweets that contain emojis
 - Process the tweets and use the emojis as labels
 - Vectorize the tweets using tfidf
@@ -31,14 +32,14 @@ Urban Emoji uses natural language processing (nlp) and non-negative matrix facto
 
 ## Results
 
-Below is a proof of concept example of the results, as you can see the crying emoji is most often affiliated with the words above for that group. As I add more and more tweets and use different techniques I expect to get further improve the slang definitions for many emojis.
+Below is a proof of concept example of the results, as you can see the crying emoji is most often affiliated with the words above for that group. As I add more and more tweets and use different techniques I expect to get further improve the slang definitions for many more emojis.
 
 ![Alt text](/figures/results_example.png "Results Example")
 
 <img src="figures/break_line.png" width=100% height=100%/>
 
 ## Tech Stack
-Twitter’s API, Python, Pandas, Scikit-Learn, Unicode
+Twitter’s API, Python, Pandas, Scikit-Learn, Unicode, AWS
 
 <img src="figures/break_line.png" width=100% height=100%/>
 
