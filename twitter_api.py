@@ -3,16 +3,21 @@ import tweepy
 import pickle
 import time
 import os
+import datetime
+import re
 
-consumer_key =  os.environ['TWITTER_consumer_key']
-consumer_secret = os.environ['TWITTER_consumer_secret']
-access_token = os.environ['TWITTER_access_token']
-access_secret = os.environ['TWITTER_access_secret']
+try:
+    consumer_key =  os.environ['TWITTER_consumer_key']
+    consumer_secret = os.environ['TWITTER_consumer_secret']
+    access_token = os.environ['TWITTER_access_token']
+    access_secret = os.environ['TWITTER_access_secret']
 
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_secret)
+    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(access_token, access_secret)
 
-api = tweepy.API(auth)
+    api = tweepy.API(auth)
+except:
+    pass
 
 
 def get_tweets(topic, save_file_name, num_batches=25): # num_batches * 100 is total tweets target
@@ -38,4 +43,10 @@ def get_tweets(topic, save_file_name, num_batches=25): # num_batches * 100 is to
 
 
 if __name__ == '__main__':
-    get_tweets('are', 'tweets/tweets_02_08_are', 100) #batch size 25
+    now = datetime.datetime.today().ctime()
+    now = re.sub(' ','_',now)
+
+    simple_words = ['is', 'it', 'the', 'are', 'if', 'this','that']
+    word = simple_words[0]
+    for word in simple_words:
+        get_tweets(word, 'tweets/tweets_{}_{}'.format(now,word), 5)
