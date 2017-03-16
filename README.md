@@ -19,7 +19,8 @@ Urban Emoji uses natural language processing (nlp) and non-negative matrix facto
 ## Process
 
 - Using Twitter API to download tweets
-- Automated Twitter API to an AWS EC2 instance writing to a S3 bucket
+- Use AWS to run the Twitter API using EC2 and automatically save the tweets to a bucket on S3
+- Use cron to automatically download tweets twice a day
 - Identify tweets that contain emojis
 - Process the tweets and use the emojis as labels
 - Vectorize the tweets using tfidf
