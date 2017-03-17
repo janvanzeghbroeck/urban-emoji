@@ -6,7 +6,7 @@ import boto
 
 # using json to get the keys
 import json
-with open('api_keys.json') as f:
+with open('../api_keys.json') as f:
     data = json.load(f)
 aws_access_key = data['AWS_ACCESS_KEY_ID']
 aws_access_secret_key['AWS_SECRET_ACCESS_KEY']
