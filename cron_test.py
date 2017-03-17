@@ -17,4 +17,4 @@ bucket_name = 'urban-emoji-tweets'
 b = conn.get_bucket(bucket_name)
 
 file_object = b.new_key('tweets/cron_test.md')#where to save
-file_object.set_contents_from_filename('README.md')
+file_object.set_contents_from_filename('/home/ubuntu/urban-emoji/README.md')
