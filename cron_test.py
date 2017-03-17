@@ -8,7 +8,7 @@ import boto
 import json
 with open('../api_keys.json') as f:
     data = json.load(f)
-aws_access_key = data = data['AWS_ACCESS_KEY_ID']
+aws_access_key = data['AWS_ACCESS_KEY_ID']
 aws_access_secret_key = data['AWS_SECRET_ACCESS_KEY']
 # scp ~/Desktop/api_keys.json tweets:~
 
