@@ -10,6 +10,7 @@ with open('/home/ubuntu/api_keys.json') as f:
     data = json.load(f)
 aws_access_key = data['AWS_ACCESS_KEY_ID']
 aws_access_secret_key = data['AWS_SECRET_ACCESS_KEY']
+# to move a file to my ec2 instance
 # scp ~/Desktop/api_keys.json tweets:~
 
 
@@ -18,11 +19,13 @@ aws_access_secret_key = data['AWS_SECRET_ACCESS_KEY']
 # aws_access_key = os.environ['AWS_ACCESS_KEY_ID']
 # aws_access_secret_key = os.environ['AWS_SECRET_ACCESS_KEY']
 
-conn = boto.connect_s3(aws_access_key, aws_access_secret_key)
+def test_cron():
 
-bucket_name = 'urban-emoji-tweets'
+    conn = boto.connect_s3(aws_access_key, aws_access_secret_key)
 
-b = conn.get_bucket(bucket_name)
+    bucket_name = 'urban-emoji-tweets'
 
-file_object = b.new_key('tweets/cron_test.md')#where to save in S3
-file_object.set_contents_from_filename('/home/ubuntu/urban-emoji/README.md')
+    b = conn.get_bucket(bucket_name)
+
+    file_object = b.new_key('tweets/cron_test.md')#where to save in S3
+    file_object.set_contents_from_filename('/home/ubuntu/urban-emoji/README.md')
