@@ -10,7 +10,7 @@ Urban Emoji uses natural language processing (nlp) and non-negative matrix facto
 
 - [Process](#process)
 - [Results](#results)
-- [Business Insight](business_insight)
+- [Business Applications](business_applications)
 - [Tech Stack](#tech-stack)
 - [More Projects](#more-projects)
 
@@ -54,6 +54,8 @@ The emoji information Urban Emoji discovers is not useful for impressing the you
 #### Business Applications
 - Correctly use emojis in a company's social media posts to connect with the intended audience
 - Aid in better identifying what the audience of a product/company/business actually is
+
+<img src="figures/break_line.png" width=100% height=100%/>
 
 ## Tech Stack
 - Twitter’s API & Tweepy
