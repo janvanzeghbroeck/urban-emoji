@@ -10,7 +10,7 @@ Urban Emoji uses natural language processing (nlp) and non-negative matrix facto
 
 - [Process](#process)
 - [Results](#results)
-- [Business Applications](business_applications)
+- [Real World Application](real_world_application)
 - [Tech Stack](#tech-stack)
 - [More Projects](#more-projects)
 
@@ -42,7 +42,7 @@ As I add more and more tweets and use different techniques I expect to get furth
 
 <img src="figures/break_line.png" width=100% height=100%/>
 
-## Business Insight
+## Real World Application
 
 The emoji information Urban Emoji discovers is not useful for impressing the younger generation on how hip you are but also has purpose in other Data Science projects and business applications. Below are just a few example of where this technology could be used:
 
