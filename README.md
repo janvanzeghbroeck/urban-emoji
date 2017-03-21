@@ -10,7 +10,7 @@ Urban Emoji uses natural language processing (nlp) and non-negative matrix facto
 
 - [Process](#process)
 - [Results](#results)
-- [Real World Application](real_world_application)
+- [Real World Application](#real_world_application)
 - [Tech Stack](#tech-stack)
 - [More Projects](#more-projects)
 
