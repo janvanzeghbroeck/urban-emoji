@@ -52,10 +52,10 @@ def print_emoji(tweet,emoji_char):
 
 
 if __name__ == '__main__':
-    tweets = np.array(list(pickle.load(open('yay_moji.pkl','rb'))))
+    tweets = np.array(list(pickle.load(open('../database/yay_moji.pkl','rb'))))
     # type is list
 
-    emojis = pd.read_pickle('df_emojis.pkl')
+    emojis = pd.read_pickle('../database/df_emojis.pkl')
     # type is DataFrame
 
 
@@ -63,7 +63,7 @@ if __name__ == '__main__':
     # ------------- tfidf
     stopwords = set(list(ENGLISH_STOP_WORDS) + ['rt', 'follow', 'dm', 'https', 'ur', 'll' ,'amp', 'subscribe', 'don', 've', 'retweet', 'im', 'http'])
 
-    tfidf = TfidfVectorizer(max_features=10000, max_df=0.05, min_df=0.001, stop_words = stopwords)
+    tfidf = TfidfVectorizer(max_features=10000, max_df=0.05, min_df=0.001, stop_words = stopwords, ngram_range = (1,2))
 
     #lemmetizing need to consider cleaning the tweets myself
 
@@ -82,6 +82,7 @@ if __name__ == '__main__':
     # --------------- Printing Top 10
     tweet_lst = []
     top = 10
+    tweet_in_group_thresh = .001 #score thresh if we consider that tweet as part of that group
     for group in range(k):
         #idx of the top ten words for each group
         i_words = np.argsort(H[group])[::-1][:top]
@@ -93,8 +94,10 @@ if __name__ == '__main__':
 
         print '-'*10
         print 'Group:',group
+        counted_tweets = np.argwhere(W[:,group] > tweet_in_group_thresh)
+        print counted_tweets.shape[0], 'tweets'
         for word in words:
-            print '#',word
+            print '-->',word
         for i_tweet in i_emojis:
             print_emoji(tweets[i_tweet], emojis['unichar'])
             tweet_lst.append(tweets[i_tweet])
@@ -102,7 +105,7 @@ if __name__ == '__main__':
         # find percentage of emoji per group
         most_emoji, how_many = Counter(emo_lst).most_common(1)[0]
         score = float(how_many)/top
-        print score #score is not perfect - similar emojis and repeat in the same tweet
+        # print score #score is not perfect - similar emojis and repeat in the same tweet
         print '\n'
 
     # --------------- printing most common emojis

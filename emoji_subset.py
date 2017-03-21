@@ -41,7 +41,7 @@ def NB_acc(emo1, emo2, tweets, emoji):
     a = sub_set(tweets,emojis, emo1)
     b = sub_set(tweets,emojis, emo2)
     labels = np.hstack((np.zeros(len(a)),np.ones(len(b))))
-    # me and 
+    # me and
 
     tweets_a, emos_a = zip(*a)
     tweets_b, emos_b = zip(*b)
@@ -75,9 +75,9 @@ def NB_acc(emo1, emo2, tweets, emoji):
 
 
 if __name__ == '__main__':
-    tweets1 = np.array(list(pickle.load(open('yay_moji.pkl','rb'))))
+    tweets1 = np.array(list(pickle.load(open('../database/yay_moji.pkl','rb'))))
     # type is list
-    emojis = pd.read_pickle('df_emojis.pkl')
+    emojis = pd.read_pickle('../database/df_emojis.pkl')
     # type is DataFrame
 
     #removing words with digits and ['_@']
@@ -100,7 +100,7 @@ if __name__ == '__main__':
     connections = []
     b = emoji_choice
     # for a, b in half_rnd:
-    for b in range(100):
+    for b in range(10):
         a = 0
         emo1 = emoji_choice[a][0]
         num1 = emoji_choice[a][1]
@@ -108,7 +108,7 @@ if __name__ == '__main__':
         num2 = emoji_choice[b][1]
         acc = NB_acc(emo1, emo2, tweets, emojis)
         connections.append([emo1, num1, emo2, num2, acc])
-        # print emo1, num1, emo2, num2, acc
+        print emo1, num1, emo2, num2, acc
     emo1, num1, emo2, num2, acc = zip(*connections)
 
     sorted_best = np.argsort(acc)[::-1]

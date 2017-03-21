@@ -3,16 +3,37 @@ import pandas as pd
 import os
 
 # ----- combines all the tweets into one list
-def pickle_pile():
+def pickle_pile(s3 = False):
+
     tweets = []
-    for pkl_file in os.listdir('tweets'):
-        tweets += list(pickle.load(open('tweets/{}'.format(pkl_file),'rb')))
+    if s3:
+        import boto
+        aws_access_key = os.environ['AWS_ACCESS_KEY_ID']
+        aws_access_secret_key = os.environ['AWS_SECRET_ACCESS_KEY']
+
+        # use boto to connect to aws buckets
+        conn = boto.connect_s3(aws_access_key, aws_access_secret_key)
+        bucket_name = 'urban-emoji-tweets'
+        b = conn.get_bucket(bucket_name)
+
+        for i, key in enumerate(b.list(prefix = 'tweets/tweets')):
+            filename = key.name
+            file_object = b.new_key(filename)
+            local_save_path = '../{}'.format(filename)
+            file_object.get_contents_to_filename('../{}'.format(filename))
+            tweets += list(pickle.load(open(local_save_path,'rb')))
+            os.remove(local_save_path)
+
+    for pkl_file in os.listdir('../tweets_og'):
+        tweets += list(pickle.load(open('../tweets_og/{}'.format(pkl_file),'rb')))
+
+
     return list(set(tweets))
 
 # ----- creates the emoji df and adds the unichar
 def df_emojis():
     # create full df_emoji
-    df = pd.read_pickle('emoji.pkl')
+    df = pd.read_pickle('../database/emoji.pkl')
 
     # create unicode characters for emojis
     unichar = []
@@ -47,12 +68,16 @@ def yay_no(tweets,df_emojis):
 
 if __name__ == '__main__':
 
-    tweets = pickle_pile()
+
+    print 'Running, this may take a while...'
+    tweets = pickle_pile(s3 = True)
 
     df_emojis = df_emojis()
     df_emojis = df_emojis.iloc[0:1013,:] #dont emojis after 1013 yet
 
     yay_moji, no_moji = yay_no(tweets,df_emojis)
 
-    pickle.dump( yay_moji, open( "yay_moji.pkl", "wb"))
-    pickle.dump( df_emojis, open( "df_emojis.pkl", "wb"))
+    pickle.dump( yay_moji, open( "../database/yay_moji.pkl", "wb"))
+    pickle.dump( df_emojis, open( "../database/df_emojis.pkl", "wb"))
+
+    print 'Succesfully pickled {} tweets and emoji data frame'.format(len(yay_moji))
