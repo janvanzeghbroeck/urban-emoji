@@ -22,15 +22,15 @@ Urban Emoji uses natural language processing (nlp) and non-negative matrix facto
 - Using Twitter API to download tweets
 - Use AWS to run the Twitter API using EC2 and automatically save the tweets to a bucket on S3
 - Use a cron job to automatically download tweets every day
-#### Cleaning Processing the data
+#### Cleaning & Processing the data
 - Identify tweets that contain emojis
 - Process the tweets and use the emojis as labels
-- Vectorize the tweets using tfidf
+- Vectorize the tweets using tfidf and count-vectorizer
 #### Modeling
 - Utilize NMF and topic modeling to cluster similar tweets to identify emojis that have similar meanings
 - Create a emoji predictor using Naive Bayes
 - Identify words commonly associated with each emoji
-    - Extracted from the NMF and the Naive Bayes
+    - Extracted from the NMF and the Naive Bayes models
 #### Model Validation
 - Test on a subset of tweets that the model was not trained on
 - User interaction
@@ -53,7 +53,7 @@ As I add more and more tweets and use different techniques I expect to get furth
 #### Predictive Results (22 MARCH 2017)
 Once the Naive Bayes predictor was running, I inputed a collection of short sentences to see if the predictions made sense. Below you can see these sentences for yourself and up to 5 predicted emojis. As you can see it did pretty well but could use more tweaking to do great. Ideas include, more text processing (lemmatizing), more data, and/or other model options (logistic regression).
 
-<img src="figures/predict_example.png" width=100% height=100%/>
+<img src="figures/predict_example.png" width=50% height=50%/>
 
 <img src="figures/break_line.png" width=100% height=100%/>
 
