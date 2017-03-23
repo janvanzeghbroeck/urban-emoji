@@ -5,8 +5,8 @@
 <img src="figures/break_line.png" width=100% height=100%/>
 
 ## Overview
-
-Urban Emoji uses natural language processing (nlp) and non-negative matrix factorization (nmf) to interpret slang meanings of emojis from analyzing tweets.
+Keeping up with language trends and the new 'hip slang' can be challenging for anyone outside of high school.
+Urban Emoji solves this by uses natural language processing (NLP) and Data Science modeling (NMF, Naive Bayes) on Twitter data to interpret slang meanings of emojis and predict what emoji would go best with your tweet.
 
 - [Process](#process)
 - [Results](#results)
@@ -75,7 +75,7 @@ The emoji information Urban Emoji discovers is not useful for impressing the you
 ## Tech Stack
 - Twitter’s API & Tweepy
 - Python
-- Pandas
+- Pandas & numpy
 - Scikit-Learn
 - Unicode
 - AWS, S3, & EC2
