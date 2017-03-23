@@ -52,7 +52,7 @@ As I add more and more tweets and use different techniques I expect to get furth
 ![Alt text](/figures/results_example.png "Results Example")
 
 #### Predictive Results (22 MAR 2017)
-Once the Naive Bayes predictor was running, I inputed a collection of short sentences to see if the predictions made sense. Below you can see these sentences for yourself and up to 5 predicted emojis. As you can see it did pretty well but could use more tweaking to do great. Ideas include, more text processing (lemmatizing), more data, and/or other model options (logistic regression).
+Once the Naive Bayes predictor was running, I tested a collection of short sentences to see if the predictions made sense. Below you can see these sentences for yourself and up to 5 predicted emojis. The model ended up doing pretty well, but could use more tweaking to make it great. Ideas include, more text processing (lemmatizing), more data, and/or other model options (logistic regression).
 
 <img src="figures/predict_example.png" width=50% height=50%/>
 
