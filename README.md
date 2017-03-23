@@ -5,9 +5,9 @@
 <img src="figures/break_line.png" width=100% height=100%/>
 
 ## Overview
-#### Keeping up with language trends and the new 'hip slang' can be challenging for anyone outside of high school.
+Keeping up with language trends and the new 'hip slang' can be challenging for anyone outside of high school.
 
-#### Urban Emoji solves this by using natural language processing (NLP) and Data Science modeling (NMF, Naive Bayes) on Twitter data to interpret slang meanings of emojis and predict what emoji would go best with your tweet.
+Urban Emoji solves this by using natural language processing (NLP) and Data Science modeling (NMF, Naive Bayes) on Twitter data to interpret slang meanings of emojis and predict what emoji would go best with your next tweet.
 
 - [Process](#process)
 - [Results](#results)
