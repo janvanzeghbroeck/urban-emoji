@@ -18,27 +18,42 @@ Urban Emoji uses natural language processing (nlp) and non-negative matrix facto
 
 ## Process
 
+#### Collecting the Data
 - Using Twitter API to download tweets
 - Use AWS to run the Twitter API using EC2 and automatically save the tweets to a bucket on S3
 - Use a cron job to automatically download tweets every day
+#### Cleaning Processing the data
 - Identify tweets that contain emojis
 - Process the tweets and use the emojis as labels
 - Vectorize the tweets using tfidf
-- Use NMF and topic modeling to group the tweets and print most common words in each topic
-- Print the emojis associated with the tweets in each topic
-- Find topics with a large percentage of similar emojis to connects words and emojis finding 'definitions'
-- Apply NMF for tweets all with similar emojis to further identify associated words to find better define their slang meanings
-- Further work: Identify profiles of people who commonly use a specific emoji (think demographic information)
+#### Modeling
+- Utilize NMF and topic modeling to cluster similar tweets to identify emojis that have similar meanings
+- Create a emoji predictor using Naive Bayes
+- Identify words commonly associated with each emoji
+    - Extracted from the NMF and the Naive Bayes
+#### Model Validation
+- Test on a subset of tweets that the model was not trained on
+- User interaction
+    - Allow for a text entry
+    - Predict multiple emojis using model
+    - Allow user to select more appropriate emoji
+    - Save text and selected emoji as new labeled data
 
 <img src="figures/break_line.png" width=100% height=100%/>
 
 ## Results
 
+#### Initial Results (3 FEB 2017)
 Below is a proof-of-concept example of the results, as you can see the crying emoji is most often affiliated with the words above for that group. The hashtags #girlposts and #femaletexts are associated with this emoji which show an indication of what type of people are commonly using it on Twitter.
 
 As I add more and more tweets and use different techniques I expect to get further improve the slang definitions and also get insight on the type of people who use each emoji.
 
 ![Alt text](/figures/results_example.png "Results Example")
+
+#### Predictive Results (22 MARCH 2017)
+Once the Naive Bayes predictor was running, I inputed a collection of short sentences to see if the predictions made sense. Below you can see these sentences for yourself and up to 5 predicted emojis. As you can see it did pretty well but could use more tweaking to do great. Ideas include, more text processing (lemmatizing), more data, and/or other model options (logistic regression).
+
+<img src="figures/predict_example.png" width=100% height=100%/>
 
 <img src="figures/break_line.png" width=100% height=100%/>
 
