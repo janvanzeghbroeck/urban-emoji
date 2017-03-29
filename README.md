@@ -48,7 +48,7 @@ Urban Emoji solves this by using natural language processing (NLP) and Data Scie
 
 Comparing my model to others that already exists aids in validation of the model and also shows the unique strengths and differences on Urban Emoji.
 
-For the phrase "My iphone screen is cracked" Urban Emoji predicted: 🙈 😳 😱 😩 😡
+For the phrase *My iphone screen is cracked* Urban Emoji predicted: 🙈 😳 😱 😩 😡
 
 And Swiftmoji predicted:
 
@@ -56,9 +56,9 @@ And Swiftmoji predicted:
 
  The two predictions both recommend appropriate emojis with some overlap. Their predictions seemingly haven't discovered Twitter's love for the monkey covering its eyes emoji 🙈.
 
- Their prediction also include some of the most popular emojis that my model doesn't agree with. The 'loudly crying face' emoji, 😭, is by far the most popular emoji on Twitter. 😭 may seem negative, but if we look into my model's the top associated words with this emoji we find the words 'cute', 'like', 'heart', and 'love'.
+ Their prediction also include some of the most popular emojis that my model doesn't agree with. The 'loudly crying face' emoji, 😭, is by far the most popular emoji on Twitter. 😭 may seem negative, but if we look into my model's the top associated words with this emoji we find the words *cute*, *like*, *heart*, and *love*.
 
-It seems that 😭 is more associated more with extreme happiness (tears of joy) than extreme sadness, making it a less-than-ideal prediction for "My iphone screen is cracked". If I had to guess, I would say it predicts only because of it's popularity. 
+It seems that 😭 is more associated more with extreme happiness (tears of joy) than extreme sadness, making it a less-than-ideal prediction for *My iphone screen is cracked*. If I had to guess, I would say it predicts only because of it's popularity.
 
 #### Predictive Results (22 MAR 2017)
 Once the Naive Bayes predictor was running, I tested a collection of short sentences to see if the predictions made sense. Below you can see these sentences for yourself and up to 5 predicted emojis. The model ended up doing pretty well, but could use more tweaking to make it great. Ideas include, more text processing (lemmatizing), more data, and/or other model options (logistic regression).
