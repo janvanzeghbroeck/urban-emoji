@@ -46,15 +46,15 @@ Urban Emoji solves this by using natural language processing (NLP) and Data Scie
 
 #### Comparing My Model (29 MAR 2017)
 
-Above and to the right is predictions from the product Swiftmoji. My model predicts similarly with a few differences.
+Comparing my model to others that already exists aids in validation of the model and also shows the unique strengths and differences on Urban Emoji.
 
-For the phrase 'My iphone screen is cracked' Urban Emoji predicted:
-<img src="figures/single_example.png" width=50% height=50%/>
+For the phrase 'My iphone screen is cracked' Urban Emoji predicted: 🙈 😳 😱 😩 😡
 
 And Swiftmoji predicted:
+
 <img src="figures/comparison.png" width=30% height=30%/>
 
- Their predictions seemingly haven't discovered Twitter's love for the monkey covering its eyes emoji. 🙈
+ The two predictions both recommend appropriate emojis with some overlap. Their predictions seemingly haven't discovered Twitter's love for the monkey covering its eyes emoji. 🙈
 
 #### Predictive Results (22 MAR 2017)
 Once the Naive Bayes predictor was running, I tested a collection of short sentences to see if the predictions made sense. Below you can see these sentences for yourself and up to 5 predicted emojis. The model ended up doing pretty well, but could use more tweaking to make it great. Ideas include, more text processing (lemmatizing), more data, and/or other model options (logistic regression).
