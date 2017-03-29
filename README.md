@@ -55,10 +55,12 @@ And Swiftmoji predicted:
 <img src="figures/comparison.png" width=30% height=30%/>
 
  The two predictions both recommend appropriate emojis with some overlap. Their predictions seemingly haven't discovered Twitter's love for the monkey covering its eyes emoji 🙈. Their prediction also include some of the most popular emojis that my model doesn't agree with. The 'loudly crying face' emoji, 😭, is by far the most popular emoji on Twitter and may seem negative but if we look into the top words associated with this emoji in my model we get the following:
-    - cute
-    - like
-    - heart
-    - love
+
+- cute
+- like
+- heart
+- love
+
 It seems that 😭 is more associated more with extreme happiness than extreme sadness, making it a poor prediction for "My iphone screen is cracked".
 
 #### Predictive Results (22 MAR 2017)
