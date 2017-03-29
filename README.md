@@ -10,7 +10,7 @@ Keeping up with language trends and the new 'hip slang' can be challenging for a
 Urban Emoji solves this by using natural language processing (NLP) and Data Science modeling (NMF, Naive Bayes) on Twitter data to interpret slang meanings of emojis and predict what emoji would go best with your next tweet.
 
 - [Process](#process)
-- [Results](#results)
+- [Results Blog](#results_blog)
 - [Real World Application](#real-world-application)
 - [Tech Stack](#tech-stack)
 - [More Projects](#more-projects)
@@ -42,7 +42,18 @@ Urban Emoji solves this by using natural language processing (NLP) and Data Scie
 
 <img src="figures/break_line.png" width=100% height=100%/>
 
-## Results
+## Results Blog
+
+#### Predictive Results (22 MAR 2017)
+Once the Naive Bayes predictor was running, I tested a collection of short sentences to see if the predictions made sense. Below you can see these sentences for yourself and up to 5 predicted emojis. The model ended up doing pretty well, but could use more tweaking to make it great. Ideas include, more text processing (lemmatizing), more data, and/or other model options (logistic regression).
+
+<img src="figures/predict_example.png" width=50% height=50%/> <img src="figures/comparison.png" width=50% height=50%/>
+
+Above and to the right is predictions from the product Swiftmoji. My model predicts similarly with a few differences.
+
+Currently, when scoring the model against the test set of emojis, the model preforms poorly. This is likely due to the classes being quite imbalanced and that many emojis are applicable for any given text string. Because of this, I have opted for predicting multiple emoji options and then visually assess the performance of the model.
+
+
 
 #### Initial Results (3 FEB 2017)
 Below is a proof-of-concept example of the results, as you can see the crying emoji is most often affiliated with the words above for that group. The hashtags #girlposts and #femaletexts are associated with this emoji which show an indication of what type of people are commonly using it on Twitter.
@@ -51,12 +62,8 @@ As I add more and more tweets and use different techniques I expect to get furth
 
 ![Alt text](/figures/results_example.png "Results Example")
 
-#### Predictive Results (22 MAR 2017)
-Once the Naive Bayes predictor was running, I tested a collection of short sentences to see if the predictions made sense. Below you can see these sentences for yourself and up to 5 predicted emojis. The model ended up doing pretty well, but could use more tweaking to make it great. Ideas include, more text processing (lemmatizing), more data, and/or other model options (logistic regression).
-
-<img src="figures/predict_example.png" width=50% height=50%/>
-
 <img src="figures/break_line.png" width=100% height=100%/>
+
 
 ## Real World Application
 
