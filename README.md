@@ -44,13 +44,18 @@ Urban Emoji solves this by using natural language processing (NLP) and Data Scie
 
 ## Results Blog
 
+- [Comparing My Model (29 MAR 2017)](#comparing_my_model_29_mar_2017)
+- [Predictive Results (22 MAR 2017)](#predictive_results_22_mar_2017)
+- [Initial Results (3 FEB 2017)](#initial_results_3_feb_2017)
+
+
 #### Comparing My Model (29 MAR 2017)
 
 Comparing my model to others that already exists aids in validation of the model and also shows the unique strengths and differences on Urban Emoji.
 
-For the phrase *My iphone screen is cracked* Urban Emoji predicted: 🙈 😳 😱 😩 😡
+For the phrase - *My iphone screen is cracked* - Urban Emoji predicted: 🙈 😳 😱 😩 😡
 
-And Swiftmoji predicted:
+And Swiftmoji, a text prediction program already on the market, predicted:
 
 <img src="figures/comparison.png" width=30% height=30%/>
 
