@@ -44,9 +44,9 @@ Urban Emoji solves this by using natural language processing (NLP) and Data Scie
 
 ## Results Blog
 
-- [Comparing My Model (29 MAR 2017)](#comparing_my_model_29_mar_2017)
-- [Predictive Results (22 MAR 2017)](#predictive_results_22_mar_2017)
-- [Initial Results (3 FEB 2017)](#initial_results_3_feb_2017)
+- [Comparing My Model (29 MAR 2017)](#comparing-my-model-29-mar-2017)
+- [Predictive Results (22 MAR 2017)](#predictive-results-22-mar-2017)
+- [Initial Results (3 FEB 2017)](#initial-results-3-feb-2017)
 
 
 #### Comparing My Model (29 MAR 2017)
