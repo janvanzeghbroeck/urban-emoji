@@ -10,7 +10,7 @@ Keeping up with language trends and the new 'hip slang' can be challenging for a
 Urban Emoji solves this by using natural language processing (NLP) and Data Science modeling (NMF, Naive Bayes) on Twitter data to interpret slang meanings of emojis and predict what emoji would go best with your next tweet.
 
 - [Process](#process)
-- [Results Blog](#results_blog)
+- [Results Blog](#results-blog)
 - [Real World Application](#real-world-application)
 - [Tech Stack](#tech-stack)
 - [More Projects](#more-projects)
